@@ -12,6 +12,7 @@ require("plugins.neotree")
 require("plugins.treesitter")
 require("plugins.mason")
 require("plugins.lsp")
+require("plugins.null_ls")
 require("plugins.cmp")
 --require("plugins.neodev")
 

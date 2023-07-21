@@ -1,6 +1,7 @@
 local lspconfig = require('lspconfig')
 
-require'lspconfig'.pyright.setup{
+lspconfig.clangd.setup{}
+lspconfig.pyright.setup{
     settings = {
         python = {
             analysis = {
@@ -10,7 +11,7 @@ require'lspconfig'.pyright.setup{
     }
 }
 
-require'lspconfig'.gopls.setup{
+lspconfig.gopls.setup{
     settings = {
         gopls = {
             analyses = {

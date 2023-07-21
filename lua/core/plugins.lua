@@ -36,6 +36,8 @@ require("lazy").setup({
     { "neovim/nvim-lspconfig" },
     { "williamboman/mason.nvim", build = ":MasonUpdate" },
     { 'neovim/nvim-lspconfig' },
+    { 'jose-elias-alvarez/null-ls.nvim' },
+
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path' },
