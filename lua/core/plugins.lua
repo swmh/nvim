@@ -18,6 +18,16 @@ require("lazy").setup({
     { 'windwp/nvim-autopairs', config = true},
     { "lukas-reineke/indent-blankline.nvim" },
     {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    },
+    {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }

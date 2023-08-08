@@ -18,6 +18,8 @@ map("n", "<C-y>", "<C-y>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
+map("n", "<leader>yy", ":let @+=@0<CR>")
+
 -- replace selected text with text contains in buffer and not replace buffer  
 map("x", "<leader>p", "\"_dP")
 

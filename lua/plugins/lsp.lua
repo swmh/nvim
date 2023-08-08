@@ -1,7 +1,7 @@
 local lspconfig = require('lspconfig')
 
 lspconfig.clangd.setup{}
-
+lspconfig.bashls.setup{}
 lspconfig.pyright.setup{
     settings = {
         python = {
