@@ -16,6 +16,7 @@ require("lazy").setup({
     { 'phaazon/hop.nvim' },
     { 'numToStr/Comment.nvim', config = true},
     { 'windwp/nvim-autopairs', config = true},
+    { "lukas-reineke/indent-blankline.nvim" },
     {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',

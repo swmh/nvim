@@ -1,11 +1,16 @@
 local lspconfig = require('lspconfig')
 
 lspconfig.clangd.setup{}
+
 lspconfig.pyright.setup{
     settings = {
         python = {
             analysis = {
-                typeCheckingMode = 'off',
+                typeCheckingMode = 'basic',
+                diagnosticSeverityOverrides = {
+                    -- reportOptionalMemberAccess = 'none' 
+                    reportGeneralTypeIssues = 'none'
+                }
             }
         }
     }
