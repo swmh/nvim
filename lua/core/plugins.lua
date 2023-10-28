@@ -49,10 +49,44 @@ require("lazy").setup({
     { 'neovim/nvim-lspconfig' },
     { 'jose-elias-alvarez/null-ls.nvim' },
 
+    -- Debugger
+    { 'mfussenegger/nvim-dap' },
+    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+    { 'leoluz/nvim-dap-go' },
+
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-cmdline' },
     { 'hrsh7th/nvim-cmp' },
     { 'L3MON4D3/LuaSnip', version="v1.*", build = "make install_jsregexp" },
+
+    -- { 
+    --     'fatih/vim-go', 
+    -- }
+    {
+        "ray-x/go.nvim",
+        dependencies = {  -- optional packages
+        "ray-x/guihua.lua",
+        "neovim/nvim-lspconfig",
+        "nvim-treesitter/nvim-treesitter",
+        },
+        config = function()
+            require("go").setup()
+        end,
+        event = {"CmdlineEnter"},
+        ft = {"go", 'gomod'},
+        build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+    },
+
+    {
+        "iamcco/markdown-preview.nvim",
+        build = "cd app && npm install",
+        enabled = true,
+        ft = "markdown",
+    },
+
+    {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+
+
 })

@@ -20,3 +20,9 @@ vim.opt.scrolloff = 10
 
 vim.opt.updatetime = 5
 vim.opt.colorcolumn = "0"
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = true
+-- vim.opt.foldlevel = 1
+vim.opt.foldlevelstart = 88
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+

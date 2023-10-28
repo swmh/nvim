@@ -1,0 +1,18 @@
+-- local font_size = 10
+-- 
+-- local font_factor = 2
+-- 
+-- local font = "JetBrains\\ Mono\\ NL:h"
+-- 
+-- vim.keymap.set("n", "<C-J>", function()
+--     font_size = font_size + font_factor
+--     local a = "set guifont=" .. font
+--     exe a .. font_size
+-- end)
+-- -- vim.keymap.set("n", "<C-H>", function()
+-- --     font_size = font_size - font_factor
+-- --     exe "set guifont=" .. font .. font_size
+-- --     -- change_scale_factor(1/1.25)
+-- -- end)
+-- 
+-- 
