@@ -9,6 +9,7 @@ require("plugins.telescope")
 require("plugins.hop")
 require("plugins.neotree")
 require("plugins.indent_blankline")
+require("plugins.zen_mode")
 
 require("plugins.treesitter")
 require("plugins.mason")

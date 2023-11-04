@@ -5,9 +5,11 @@ vim.g.mapleader = " "
 map("n", "<Esc>", function () vim.cmd(":nohl")end)
 
 
+-- Move lines
 map("v", "K", ":m '<-2<CR>gv=gv")
 map("v", "J", ":m '>+1<CR>gv=gv")
 
+-- Change indend
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
@@ -15,9 +17,11 @@ map("v", ">", ">gv")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-y>", "<C-y>zz")
 
+-- zz on search
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
+-- Copy to system clipboard
 map("n", "<leader>yy", ":let @+=@0<CR>")
 
 -- replace selected text with text contains in buffer and not replace buffer  
@@ -27,4 +31,12 @@ map("x", "<leader>p", "\"_dP")
 -- NeoTree
 map('n', '<leader>pv', ':Neotree float focus<CR>')
 
-
+-- Zen Mode
+-- local zm = require("zen-mode")
+-- map('n', '<leader>z', function()
+--     zm.toggle({
+--       -- window = {
+--       --   width = .85 -- width will be 85% of the editor width
+--       -- }
+--     })
+-- end)

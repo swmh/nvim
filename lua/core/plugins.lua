@@ -13,10 +13,24 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 require("lazy").setup({
+    -- Themes
+    { 'rebelot/kanagawa.nvim'},
+    { 'Shatur/neovim-ayu' },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+    {
+        "folke/zen-mode.nvim",
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    },
+
     { 'phaazon/hop.nvim' },
     { 'numToStr/Comment.nvim', config = true},
     { 'windwp/nvim-autopairs', config = true},
-    { "lukas-reineke/indent-blankline.nvim" },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
     {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -32,7 +46,6 @@ require("lazy").setup({
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    { 'rebelot/kanagawa.nvim'},
     {
         'nvim-neo-tree/neo-tree.nvim',
         branch = "v3.x",
@@ -42,7 +55,7 @@ require("lazy").setup({
             "MunifTanjim/nui.nvim",
         }
     },
-  --  { "folke/neodev.nvim", opts = {} },
+    --  { "folke/neodev.nvim", opts = {} },
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     { "neovim/nvim-lspconfig" },
     { "williamboman/mason.nvim", build = ":MasonUpdate" },
@@ -62,14 +75,14 @@ require("lazy").setup({
     { 'L3MON4D3/LuaSnip', version="v1.*", build = "make install_jsregexp" },
 
     -- { 
-    --     'fatih/vim-go', 
-    -- }
-    {
-        "ray-x/go.nvim",
-        dependencies = {  -- optional packages
-        "ray-x/guihua.lua",
-        "neovim/nvim-lspconfig",
-        "nvim-treesitter/nvim-treesitter",
+        --     'fatih/vim-go', 
+        -- }
+        {
+            "ray-x/go.nvim",
+            dependencies = {  -- optional packages
+            "ray-x/guihua.lua",
+            "neovim/nvim-lspconfig",
+            "nvim-treesitter/nvim-treesitter",
         },
         config = function()
             require("go").setup()
