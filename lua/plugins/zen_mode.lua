@@ -3,7 +3,7 @@ local map = vim.keymap.set
 local zm = require("zen-mode")
 zm.setup({
     window = {
-        width = 140
+        width = 120
     }
 })
 map('n', '<leader>z', function()
